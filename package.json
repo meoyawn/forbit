@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "fable-core": "^0.7.17",
-    "serve-static": "^1.11.1"
+    "fable-core": "^0.7.17"
   }
 }
