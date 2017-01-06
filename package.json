@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "build": "node /node_modules/fable-compiler",
-    "start": "node server"
-   },
   "dependencies": {
     "fable-core": "^0.7.17",
     "serve-static": "^1.11.1"
