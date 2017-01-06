@@ -1,7 +1,7 @@
 {
-    "projFile": "src/",
+    "projFile": "orbit.fsx",
     "sourceMaps": true,
     "rollup": {
-        "dest": "./out/bundle.js"
+        "dest": "app.js"
     }
 }
