@@ -46,7 +46,7 @@ let bodies = [
   {mass = 1.989e30; position = Vec2 (0., 0.);        velocity = Vec2 (0., 0.);         path = []}
   {mass = 5.972e24; position = Vec2 (sunEarth, 0.);  velocity = Vec2 (0., earthSpeed); path = []}    
   {mass = 7.348e22; position = Vec2 (earthMoon, 0.); velocity = Vec2 (0., moonSpeed);  path = []}
-  {mass = 6.4171e23; position = Vec2 (1.524 * sunEarth, 0.); velocity = Vec2 (0., 24.077e3);  path = []} 
+  {mass = 6.4171e23; position = Vec2 (1.524 * sunEarth, 0.); velocity = Vec2 (0., 24.077e3);  path = []}
 ]
 
 let gravity { mass = m1; position = p1 } { mass = m2; position = p2 } = 
