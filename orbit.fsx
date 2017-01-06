@@ -34,18 +34,19 @@ let setLength n v = n * normalize v
 
 let gConst = 6.673e-11
 
-let scale = 2e-9
-let speedUp = 1e6
+let scale = 1.5e-9
+let speedUp = 2e6
 
 let sunEarth = 149597870700.
 let earthMoon = sunEarth + 384400000.
-let earthSpeed = 30000.
+let earthSpeed = 29.78e3
 let moonSpeed = earthSpeed + (1023.056 * 0.94)
 
 let bodies = [
   {mass = 1.989e30; position = Vec2 (0., 0.);        velocity = Vec2 (0., 0.);         path = []}
   {mass = 5.972e24; position = Vec2 (sunEarth, 0.);  velocity = Vec2 (0., earthSpeed); path = []}    
-  {mass = 7.348e22; position = Vec2 (earthMoon, 0.); velocity = Vec2 (0., moonSpeed);  path = []} 
+  {mass = 7.348e22; position = Vec2 (earthMoon, 0.); velocity = Vec2 (0., moonSpeed);  path = []}
+  {mass = 6.4171e23; position = Vec2 (1.524 * sunEarth, 0.); velocity = Vec2 (0., 24.077e3);  path = []} 
 ]
 
 let gravity { mass = m1; position = p1 } { mass = m2; position = p2 } = 
@@ -63,7 +64,7 @@ let allForces b bs =
 
 let nextBody {mass = m; position = p; velocity = v; path = oldPath} dt (accel: Vec2) = 
   let pos = p + v * dt
-  let newPath = pos :: oldPath |> List.truncate 3000
+  let newPath = pos :: oldPath |> List.truncate 10000
   {mass = m; position = pos; velocity = v + accel * dt; path = newPath}
 
 let nextBodies bs dt =
